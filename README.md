@@ -1,5 +1,6 @@
 # FacadeClipper
 
+##Description
 At this moment, a study is performed in order to present a user-oriented protocol that can be used to characterize chromatic attributes of an urban fragment. No tools performing the clipping to extract the chromatic attributes were available, and the extraction had to be performed manually.  Finding a way to speed up the process was then a serious concern.
 
 This project aim to provide a functional solution to speed up the process of extraction of the chromatic attributes and decrease the manual work on the facade photographs. In other words, obtaining the best extraction results with the less amount of work and in the shorter computation time as possible.
@@ -17,3 +18,9 @@ texture searching, color analysis and floodfill algorithm.
 
 
 This project uses the OpenCV library, the Qt library and the Power Watershed algorithm from Camille Couprie, Leo Grady, Laurent Najman and Hugues Talbot.
+
+##Install
+This project is provided with a .pro file, this mean that the commands
+`qmake && make`
+will create the executable binary file.
+
