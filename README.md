@@ -16,4 +16,4 @@ texture searching, color analysis and floodfill algorithm.
 * The third step is the enhancement of the primary result.  The enhancement is obtained by  combining  the  results  of  diㄦent  methods  using  the  primary  result.   We  combine the results of the power watershed algorithm and what we called the Canny fooding algorithm.
 
 
-This project use the OpenCV library, the Qt library and the Power Watershed algorithm from Camille Couprie, Leo Grady, Laurent Najman and Hugues Talbot.
+This project uses the OpenCV library, the Qt library and the Power Watershed algorithm from Camille Couprie, Leo Grady, Laurent Najman and Hugues Talbot.
