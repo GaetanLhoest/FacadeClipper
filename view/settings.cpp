@@ -12,6 +12,8 @@ Settings::Settings(string *directory, QWidget *parent) :
 {
     ui->setupUi(this);
     this->savedirectory = directory;
+
+    ui->lineEdit->setText(QString::fromStdString(*directory));
 }
 
 Settings::~Settings()

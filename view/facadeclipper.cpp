@@ -5,6 +5,7 @@
 #include <QString>
 #include <QFileDialog>
 #include <unistd.h>
+#include <pwd.h>
 
 #include "floodfill.h"
 #include "hough.h"
@@ -15,6 +16,7 @@
 #include "zonesextractor.h"
 #include "semiautomaticclipper.h"
 #include "settings.h"
+#include "serialworker.h"
 
 using namespace std;
 
@@ -30,7 +32,13 @@ FacadeClipper::FacadeClipper(QWidget *parent) :
     scene = new QGraphicsScene(this);
     ui->graphicsView->setScene(scene);
 
-    this->savedirectory = new std::string("/home/");
+    const char *homedir;
+
+    if ((homedir = getenv("HOME")) == NULL) {
+        homedir = getpwuid(getuid())->pw_dir;
+    }
+
+    this->savedirectory = new std::string(homedir);
 }
 
 FacadeClipper::~FacadeClipper()
@@ -85,6 +93,11 @@ void FacadeClipper::on_mainApplyButton_clicked()
     }
     else if (utf8_text == "Semi Automatic Clipper"){
         SemiAutomaticClipper w(*currentName, savedirectory);
+        w.setWindowIcon(QIcon("../tfe-image-processing/icons/homeico522.png"));
+        w.exec();
+    }
+    else if (utf8_text == "Serial Worker"){
+        SerialWorker w(*namelist, savedirectory);
         w.setWindowIcon(QIcon("../tfe-image-processing/icons/homeico522.png"));
         w.exec();
     }

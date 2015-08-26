@@ -27,6 +27,11 @@
        <widget class="QComboBox" name="methodsList">
         <item>
          <property name="text">
+          <string>Serial Worker</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
           <string>Semi Automatic Clipper</string>
          </property>
         </item>
@@ -152,7 +157,7 @@
   </action>
   <action name="actionSettings">
    <property name="text">
-    <string>Settings</string>
+    <string>&amp;Settings</string>
    </property>
   </action>
  </widget>

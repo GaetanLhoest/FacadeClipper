@@ -17,7 +17,6 @@ scene2::scene2(Mat &tmpModified)
     this->endPoint = new QPointF();
     this->counter = new short;
     this->fcolor = new Scalar();
-    this->clickedPos = new vector<Point>;
     this->positions = new vector<Point>;
     *counter = 0;
     returnPositions = false;
@@ -30,7 +29,6 @@ scene2::~scene2()
     delete endPoint;
     delete counter;
     delete fcolor;
-    delete clickedPos;
 }
 
 void scene2::setTmpModified(Mat &tmpModified)

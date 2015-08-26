@@ -84,7 +84,8 @@ SOURCES += main.cpp\
     view/zonesextractor.cpp \
     classes/scene2.cpp \
     view/semiautomaticclipper.cpp \
-    view/settings.cpp
+    view/settings.cpp \
+    view/serialworker.cpp
 
 
 HEADERS  += view/facadeclipper.h \
@@ -124,7 +125,8 @@ HEADERS  += view/facadeclipper.h \
     view/zonesextractor.h \
     classes/scene2.h \
     view/semiautomaticclipper.h \
-    view/settings.h
+    view/settings.h \
+    view/serialworker.h
 
 FORMS    += \
         ui/Hough.ui \
@@ -136,4 +138,5 @@ FORMS    += \
         ui/texturesearchengine.ui \
     ui/zonesextractor.ui \
     ui/semiautomaticclipper.ui \
-    ui/settings.ui
+    ui/settings.ui \
+    ui/serialworker.ui

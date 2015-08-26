@@ -17,7 +17,7 @@ ZonesExtractor::ZonesExtractor(QString im, QWidget *parent) :
     ui(new Ui::ZonesExtractor)
 {
     ui->setupUi(this);
-    this->setWindowState(Qt::WindowMaximized);
+
     this->im = im;
 
     src = new Mat();
@@ -49,6 +49,8 @@ ZonesExtractor::ZonesExtractor(QString im, QWidget *parent) :
 
     scene->setColor(color);
     scene->setGetPositions();
+
+    this->setWindowState(Qt::WindowMaximized);
 
 }
 

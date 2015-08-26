@@ -54,6 +54,12 @@ SemiAutomaticClipper::SemiAutomaticClipper(QString im, string *directory, QWidge
 SemiAutomaticClipper::~SemiAutomaticClipper()
 {
     delete ui;
+    delete src;
+    delete imsrc;
+    delete tmpModified;
+    delete modified;
+    delete positions;
+    delete scene;
 }
 
 void SemiAutomaticClipper::displayImage(Mat &m){
@@ -126,6 +132,7 @@ void SemiAutomaticClipper::on_applyButton_clicked()
     delete monoseed;
     delete cannyflo;
     delete output;
+    delete outputm;
     displayImage(*tmpModified);
     ui->saveButton->setEnabled(true);
 }
