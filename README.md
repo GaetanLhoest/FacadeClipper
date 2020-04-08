@@ -19,7 +19,7 @@ texture searching, color analysis and floodfill algorithm.
 
 This project uses the OpenCV library, the Qt library and the Power Watershed algorithm from Camille Couprie, Leo Grady, Laurent Najman and Hugues Talbot.
 
-##Install
+## Install
 This project is provided with a .pro file, this mean that the commands
 `qmake && make`
 will create the executable binary file.
